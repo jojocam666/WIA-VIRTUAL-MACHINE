@@ -24,4 +24,4 @@ def ripemd160(computation: BaseComputation) -> BaseComputation:
     hash = hashlib.new('ripemd160', computation.msg.data).digest()
     padded_hash = pad32(hash)
     computation.output = padded_hash
-    return 
+    return computation
